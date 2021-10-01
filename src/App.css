@@ -1,42 +1,102 @@
-.App {
+body {
+  background-color: rgb(231, 226, 226);
+}
+
+.shop-title {
+  align-content: center;
+  color: rgba(15, 14, 14, 0.897);
+  display: flex;
+  font-family: Roboto , sans-serif;
+  font-size: 40px;
+  justify-content: center;
+}
+
+.search-bar {
+  display: block;
+  height: 100%;
+  margin: auto;
+  width: 40%;
+}
+
+.search-input {
+  border: 1px transparent;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 4px;
+  width: 100%;
+}
+
+/* button style reference taken from:
+https://fdossena.com/?p=html5cool/buttons/i.frag
+(with a few changes) */
+
+.btn {
+  border: 0.16em solid white;
+  box-sizing: border-box;
+  color: #363333;
+  display: inline-block;
+  font-family: Roboto , sans-serif;
+  font-weight: 400;
+  margin: 0 0.3em 0.3em 0;
+  padding: 0.5em 3em;
   text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-label {
+  padding-bottom: 40px;
 }
 
-@media ( prefers-reduced-motion : no-preference ) {
-
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-
+.sidebar::-webkit-scrollbar {
+  width: 3px;
 }
 
-.App-header {
-  align-items: center;
-  background-color: #282c34;
-  color: white;
+.sidebar::-webkit-scrollbar-track {
+  background: grey;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: white;
+  border: 3px solid black;
+  border-radius: 50px;
+}
+
+.sidebar label {
+  padding-top: 10px;
+}
+
+img {
+  width: 150px;
+}
+
+.main > div:nth-child( 1 ) {
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  justify-content: center;
-  min-height: 100vh;
+  position: fixed;
+  right: 50px;
+  top: 100px;
+  width: 200px;
 }
 
-.App-link {
-  color: #61dafb;
+.main > div:nth-child( 2 ) {
+  background-color: white;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
 }
 
-@keyframes App-logo-spin {
-
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.shop-cart {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: fixed;
+  right: 100px;
+  top: 100px;
 }
