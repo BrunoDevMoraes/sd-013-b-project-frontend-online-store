@@ -1,2 +1,2 @@
 
- Projeto Front-End Online Store
+Projeto Front-End Online Store
